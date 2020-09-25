@@ -1,3 +1,4 @@
+import { AboutComponent } from './about/about.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -24,6 +25,7 @@ import { ShippingComponent } from './shipping/shipping.component';
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'about', component: AboutComponent },
     ])
   ],
   declarations: [
@@ -33,7 +35,8 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    AboutComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CartService]

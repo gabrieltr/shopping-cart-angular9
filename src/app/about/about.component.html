@@ -1,0 +1,16 @@
+<h2>About</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis velit voluptatem maiores corporis tempora, voluptates fugiat consequatur quibusdam ab, eveniet repellendus impedit laudantium consectetur, repellat assumenda! Quisquam voluptatibus eaque quia.
+</p>
+<p>
+  <!-- <img [src]="'assets/rockthefuture.png'"/> -->
+  <img src="assets/rockthefuture.png" />
+  <!-- <img src="https://d24cgw3uvb9a9h.cloudfront.net/static/94076/image/new/ZoomLogo.png"/> -->
+</p>
+<h3>Produtos</h3>
+<ul>
+  <li *ngFor="let product of products; index as productId">
+      <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+        {{ product.name }}
+      </a>
+  </li>
+</ul>
