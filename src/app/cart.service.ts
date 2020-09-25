@@ -1,3 +1,4 @@
+import { products } from './products';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -25,5 +26,10 @@ export class CartService {
 
   getShippingPrices() {
     return this.http.get('/assets/shipping.json');
+  }
+  
+  removeItem(product){
+    const idx = this.items.indexOf(product);
+    return this.items.splice(idx,1);
   }
 }
