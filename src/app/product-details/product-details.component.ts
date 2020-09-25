@@ -11,12 +11,12 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  
+
   product;
 
   // metodo onInit
   ngOnInit() {
-    //  subscribe to route params and fetch the product based on the productId  
+    //  subscribe to route params and fetch the product based on the productId
     this.route.paramMap.subscribe(params => {
       this.product = products[+params.get('productId')];
     });

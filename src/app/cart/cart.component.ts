@@ -32,7 +32,7 @@ export class CartComponent {
     this.checkoutForm.reset();
   }
 
-  remove(item){
+  remove(item) {
     this.cartService.removeItem(item);
   }
 }
