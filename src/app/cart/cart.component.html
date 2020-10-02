@@ -7,7 +7,9 @@
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
-  <a (click)="remove(item)">X</a>
+  <span>
+    <a (click)="remove(item)">Remover</a>
+  </span>
 </div>
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
